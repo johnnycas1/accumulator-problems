@@ -30,7 +30,13 @@ For example, the tests require that to complete this challenge, your function mu
 results on the index page in the browser.
 */
 
-
+function sum(array){
+let result = 0;
+for (var i = 0; i < array.length; i++){
+  result += array[i];
+}
+return result;
+}
 
 
 
@@ -49,7 +55,13 @@ Example: if you pass it "abc" then it should return "aabbcc"
 */
 
 
-
+function doubleLetters(string){
+  let result = '';
+  for (var i = 0; i < string.length; i++){
+    result += (string[i] + string[i]);
+  }
+  return result;
+}
 
 
 
@@ -68,6 +80,13 @@ Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
 
+function doubleNumbers(array){
+  let result = [];
+  for (var i = 0; i < array.length; i++){
+    result[i] = array[i] * 2;
+  }
+  return result;
+}
 
 
 
@@ -91,7 +110,14 @@ Examples:
 
 
 
+function multiplyNumbers(array, number){
+  let result = [];
+  for (var i = 0; i < array.length; i++){
+    result[i] = array[i] * number;
+  }
 
+  return result;
+}
 
 
 
@@ -111,8 +137,15 @@ NOTE: you can assume each input will be the same length
 */
 
 
-
-
+function interleave(array, arrays){
+  let result = [];
+  let count = [];
+  for (let key = 0; key < array.length; key++){
+  count[key] = result.push(array[key], arrays[key]);
+  }
+  return result;
+}
+interleave(["a", "b", "c"],["d", "e", "f"])
 
 
 
